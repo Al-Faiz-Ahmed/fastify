@@ -1,0 +1,11 @@
+services:
+  postgres_helper:
+    image: postgres:16
+    container_name: fastify-psql
+    restart: on-failure
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
